@@ -1,0 +1,36 @@
+target/
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!.mvn/wrapper/maven-wrapper.jar
+
+# package file
+*.war
+*.ear
+
+# temp file
+*.log
+*.cache
+*.tmp
+*.diff
+*.patch
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
