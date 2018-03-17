@@ -11,7 +11,7 @@
         <div class="col-md-12 column">
             <div class="jumbotron">
                 <h1>
-                    Welcome to emon FTP service.
+                    Welcome to www.emon.vip in the feature.
                 </h1>
                 <p>
                 <h3>
