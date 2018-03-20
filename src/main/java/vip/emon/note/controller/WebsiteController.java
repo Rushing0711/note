@@ -41,7 +41,7 @@ public class WebsiteController {
     @GetMapping("/introduction")
     public ModelAndView introduction(Map<String, Object> map) {
         DateTime beginCreateDateTime = new DateTime(2018, 2, 27, 0, 0, 0);
-        DateTime beginParseDateTime = new DateTime(2018, 2, 27, 0, 0, 0);
+        DateTime beginParseDateTime = new DateTime(2018, 3, 20, 0, 0, 0);
         DateTime currentDateTime = new DateTime();
 
         String currentDate = currentDateTime.toString("yyyy年MM月dd日");
