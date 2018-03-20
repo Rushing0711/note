@@ -11,7 +11,7 @@
         <div class="col-md-12 column">
             <div class="jumbotron">
                 <h1>
-                    Welcome to www.emon.vip in the future.
+                    Welcome to www.emon.vip.
                 </h1>
                 <p>
                 <h3>
