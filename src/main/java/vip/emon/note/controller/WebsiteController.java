@@ -40,14 +40,17 @@ public class WebsiteController {
 
     @GetMapping("/introduction")
     public ModelAndView introduction(Map<String, Object> map) {
-        DateTime beginDateTime = new DateTime(2018, 2, 27, 0, 0, 0);
+        DateTime beginCreateDateTime = new DateTime(2018, 2, 27, 0, 0, 0);
+        DateTime beginParseDateTime = new DateTime(2018, 2, 27, 0, 0, 0);
         DateTime currentDateTime = new DateTime();
 
         String currentDate = currentDateTime.toString("yyyy年MM月dd日");
-        int websiteRanDay = Days.daysBetween(beginDateTime, currentDateTime).getDays() + 1;
+        int websiteRanDay = Days.daysBetween(beginCreateDateTime, currentDateTime).getDays() + 1;
+        int websiteParseDay = Days.daysBetween(beginParseDateTime, currentDateTime).getDays() + 1;
 
         map.put("currentDate", currentDate);
         map.put("websiteRanDay", websiteRanDay);
+        map.put("websiteParseDay", websiteParseDay);
 
         return new ModelAndView("index", map);
     }
