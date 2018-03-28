@@ -38,9 +38,9 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("/weixin")
+@RequestMapping("/wechat")
 @Slf4j
-public class WeiXinController {
+public class WeChatController {
 
     @GetMapping("/checkSignature")
     public String checkSignature(
@@ -56,9 +56,13 @@ public class WeiXinController {
         String arrayString = StringUtils.arrayToDelimitedString(array, "");
         String arraySecret = DigestUtils.sha1Hex(arrayString);
 
-//        log.info("{},{},{},{},{}", signature, timestamp, nonce, echostr, arraySecret);
+        // log.info("{},{},{},{},{}", signature, timestamp, nonce, echostr, arraySecret);
 
         // 3、开发者获得加密后的字符串可与signature对比，标识该请求来源于微信
-        return echostr;
+        if (arraySecret.equals(signature)) {
+            return echostr;
+        } else {
+            return "";
+        }
     }
 }
